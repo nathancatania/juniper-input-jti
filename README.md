@@ -51,7 +51,7 @@ You can use the `-e` parameter of `docker run` to modify the above environment v
 ##### Changing ENV variables
 For example, the below disables Kafka output and enables InfluxDB output to a database located at 1.1.1.1 (other variables are kept as the default).
 ```
-docker run -d -e OUTPUT_INFLUXDB:true -e OUTPUT_KAFKA=false -e INFLUXDB_ADDR='1.1.1.1' -p 50000:50000/udp -i nathancatania/juniper-input-jti
+docker run -d -e OUTPUT_INFLUXDB=true -e OUTPUT_KAFKA=false -e INFLUXDB_ADDR='1.1.1.1' -p 50000:50000/udp -i nathancatania/juniper-input-jti
 ```
 
 To alter Kafka settings to connect to a broker located at '1.1.1.1:9094' and push data to a topic called "telemetry":
